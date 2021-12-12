@@ -1,0 +1,843 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="icon" href="/resources/images/html/favicon.png">
+  <link rel="stylesheet" href="css/css.css">
+  <script type="text/javascript" src="js/js.js"> </script>
+  <script>
+    $(document).ready(function() {
+      var liste = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
+      for (var i = 1; i < liste.length; i++) {
+        deneme(liste[i]);
+      }
+      //  alert("Click Headers to View Content");
+    });
+
+    function deneme(id) {
+      $(id).toggle();
+    }
+  </script>
+  <title> Ahmet AKAN </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-danger">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i>Ahmet AKAN</i> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html.html">HTML-PAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://akanahmet.github.io">CV</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <h1 style="cursor: pointer;" onclick="deneme('#one')">1) Welcome to CSS</h1>
+  <div id="one">
+    <div class="paragraph">
+      <p>
+        <span class="e">CSS</span> stands for <span class="e">C</span>ascading <span class="e">S</span>tyle <span class="e">S</span>heets.
+        <span class="e">Cascading</span>, refers to the way CSS applies one style on top of another.
+        <span class="e">Style Sheets</span>, control the look and feel of web documents.
+        <span class="e">CSS</span> and <span class="e">HTML</span> work hand in hand:
+        - HTML sorts out the page structure.
+        - CSS defines how HTML elements are displayed.
+      </p>
+      <p>CSS allows you to apply specific styles to specific HTML elements.
+        The main benefit of CSS is that it allows you to separate <span class="e">style</span> from <span class="e">content</span>.
+        Using just HTML, all the styles and formatting are in the same place, which becomes rather difficult to
+        maintain as the page grows. All formatting can (and <span class="e">should</span>) be removed from the HTML document and stored in a separate CSS file.</p>
+    </div>
+    <div class="paragraph">
+      <P>There are <span class="e">three</span> ways to use CSS :</p>
+      <ul>
+        <li><span class="e">INLINE-></span> in element |div style="text-align:center;"|</li>
+        <li><span class="e">INTERNAL-></span> |head||style media="screen"|p { text-align: center;}|/style||/head| </li>
+        <li><span class="e">EXTERNAL-></span> Link to style.css file, |link rel="stylesheet" href="style.css"|</li>
+      </ul>
+    </div>
+    <div class="paragraph">
+      <p>A style rule has three parts: <span class="e">selector</span>, <span class="e">property</span>, and <span class="e">value</span>.
+        For example, the headline color can be defined as: <br>
+        <span style="color: #FF851B; font-weight:bold;"> h1 { color : orange; }</span> <br>
+        The declaration block contains one or more declarations, separated by <span class="e">semicolons</span>.
+      <h2> Type Selectors </h2>
+      <ul>
+        <li> <span class="e"> Tag -> </span> <b>h1, p {font-weight: bold;}</b> </li>
+        <li> <span class="e"> Class -> </span> <b>.className {font-weight: bold;} </b></li>
+        <li> <span class="e"> Id -> </span> <b>#textId {font-weight: bold;}</b> </li>
+      </ul>
+
+      <h2>Descendant Selectors</h2>
+      <b> #intro .first em {color: pink; background-color:gray;}</b>
+      <br> <br> <span class="code_example"> /* CSS Comments goes here */ </span> </p>
+    </div>
+  </div>
+  <hr>
+
+  <!--    ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#two')">2) Working with Text</h1>
+  <div id="two">
+
+    <div class="paragraph">
+
+      <div class="baslik">
+        font-family
+      </div>
+
+      <p>The font-family property specifies the font for an element.
+        There are <span class="e">two</span> types of font family names: <br>
+        - <span class="e">font family:</span> a specific font family (like Times New Roman or Arial) <br>
+        - <span class="e">generic family:</span> a group of font families with a similar look (like Serif or Monospace)</p>
+      Separate each value with a <span class="e">comma</span> to indicate that they are alternatives.
+      If the name of a font family is more than one word, it must be in quotation marks: "Times New Roman".
+      <span class="code_example"> font-family: "Times New Roman", Times, serif; </span>
+    </div>
+
+    <div class="paragraph">
+      <p class="serif">
+        This is a paragraph shown in serif font.
+      </p>
+      <p class="sansserif">
+        This is a paragraph shown in sans-serif font.
+      </p>
+      <p class="monospace">
+        This is a paragraph shown in monospace font.
+      </p>
+      <p class="cursive">
+        This is a paragraph shown in cursive font.
+      </p>
+      <p class="fantasy">
+        This is a paragraph shown in fantasy font.
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <p> The font-family property should hold several font names as a "fallback" system.
+        When specifying a web font in a CSS style, add more than one font name, in order to avoid unexpected behaviors.
+        If the client computer for some reason doesn't have the one you choose, it will try the next one.
+        It is a good practice to specify a generic font family,
+        to let the browser pick a similar font in the generic family, if no other fonts are available.</p>
+      <span class="code_example"> font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; </span>
+      If the browser does not support the font <span class="e">Arial</span>, it tries the next fonts (<span class="e">Helvetica Neue</span>,
+      then <span class="e">Helvetica</span>).
+      If the browser doesn't have any of them, it will try the generic <span class="e">sans-serif</span>.
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        font-size
+      </div>
+      <p>The font-size property sets the size of a font.
+        One way to set the size of fonts on the web is to use <span class="e">keywords</span>.
+        For example <span class="e">xx-small</span>, <span class="e">small</span>, <span class="e">medium</span>, <span class="e">large</span>,
+        <span class="e">larger</span>, etc.
+        You can also use numerical values in <span class="e">pixels</span> or <span class="e">ems</span> to manipulate font size.
+        Setting the font size in pixel values (<span class="e">px</span>) is a good choice when you need pixel accuracy,
+        and it gives you full control over the text size.
+        The <span class="e">em</span> size unit is another way to set the font size ( <span class="e">em</span> is a relative size unit).
+        It allows all major browsers to resize the text. If you haven't set the font size anywhere on the page, then it is the
+        browser default size, which is <span class="e">16px</span>. <br>
+        To calculate the em size, just use the following formula: <span class="e">em = pixels / 16</span>
+        <span class="code_example">fonts-size:15px;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="nine">
+        Paragraph text set to be 9px;
+      </p>
+      <p class="small">
+        Paragraph text set to be small
+      </p>
+      <p class="medium">
+        Paragraph text set to be medium
+      </p>
+      <p class="large">
+        Paragraph text set to be large
+      </p>
+      <p class="xlarge">
+        Paragraph text set to be very large
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        font-style
+      </div>
+      <p>The font-style property has three values: <span class="e">normal</span>, <span class="e">italic</span>, and <span class="e">oblique</span>.
+        Oblique is very similar to italic, but less supported. <br>
+        The HTML <span class="e">|i|</span> tag will produce exactly the same result as the italic font style.</p>
+      <span class="code_example">font-style: italic;</span>
+    </div>
+    <div class="paragraph">
+      <p class="normalstyle">This paragraph is normal.</p>
+      <p class="italic">This paragraph is italic.</p>
+      <p class="oblique">This paragraph is oblique.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        font-weight
+      </div>
+      <p>The font-weight controls the boldness or thickness of the text. The values can be set as <span class="e">normal</span> (default size),
+        <span class="e">bold</span>, <span class="e">bolder</span>, and <span class="e">lighter</span>.
+        You can also define the font weight with a number from <span class="e">100 (thin)</span> to <span class="e">900 (thick)</span>,
+        according to how thick you want the text to be.
+        400 is the same as normal, and 700 is the same as bold. The HTML <span class="e">|strong|</span> tag also makes the text bold.
+        <span class="code_example">font-weight: bold;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="light">This is a font with a "lighter" weight.</p>
+      <p class="bold">This is a font with a "bold" weight.</p>
+      <p class="bolder">This is a font with a "bolder" weight.</p>
+      <p class="thicker">This is a font with a "700" weight.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        font-variant
+      </div>
+      <p>The CSS font-variant property allows you to convert your font to all small caps.
+        The values can be set as <span class="e">normal</span>, <span class="e">small-caps</span>, and <span class="e">inherit</span>.
+        <span class="code_example">font-variant: small-caps;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="normalvariant">Paragraph font variant set to normal.</p>
+      <p class="small">Paragraph font variant set to small-caps.</p>
+      <p class="inherit">Paragraph font variant set to inerit.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        color
+      </div>
+      <p>The CSS color property specifies the color of the text.
+        One method of specifying the color of the text is using a <span class="e">color name</span>: like red, green, blue, etc.
+        Another way of defining colors is using <span class="e">hexadecimal values</span> and <span class="e">RGB</span>.
+        Hexadecimal form is a pound <span class="e">sign (#)</span> followed by at most, <span class="e">6</span> hex values <span class="e">(0-F)</span>.
+        RGB defines the individual values for Red, Green, and Blue.
+        <span class="code_example"> color: rgb(128, 0, 128);</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="example">The text inside the paragraph is green.</p>
+      The text outside the paragraph is black (by default).
+      <p class="example2">The text inside the paragraph is rgb(128,0,128).</p>
+      <p class="example3">The text inside the paragraph is #7FDBFF.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Aligning Text Horizontally
+      </div>
+      <p>The text-align property specifies the horizontal alignment of text in an element.
+        By default, text on your website is aligned to the left.
+        However, at times you may require a different alignment.
+        text-align property values are as follows: <span class="e">left</span>, <span class="e">right</span>,
+        <span class="e">center</span>, and <span class="e">justify</span>.
+        <span class="code_example">text-align: center;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="left">This paragraph is aligned to <strong>left.</strong></p>
+      <p class="right">This paragraph is aligned to <strong>right.</strong></p>
+      <p class="center">This paragraph is aligned to <strong>center.</strong></p>
+    </div>
+
+
+
+    <div class="paragraph">
+      <div class="baslik">
+        Aligning Text Vertically
+      </div>
+      <p>The vertical-align property sets an element's vertical alignment.
+        Commonly used values are <span class="e">top</span>, <span class="e">middle</span>, and <span class="e">bottom</span>.
+        The vertical-align property also takes the following values:
+        <span class="e">baseline</span>, <span class="e">sub</span>,
+        <span class="e">super</span>, <span class="e">%</span> and <span class="e">px</span> (or <span class="e">pt</span>, <span class="e">cm</span>).
+        <span class="code_example"> vertical-align: bottom;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p>This is an <span class="baseline">inline text</span> example.</p>
+      <p>This is a <span class="sub">sub line text</span> example.</p>
+      <p> This is a <span class="super">super line text</span> example.</p>
+      <p> This is a <span class="pixel">pixel</span> example.</p>
+    </div>
+    <div class="paragraph">
+      <table border="1" cellpadding="2" cellspacing="0" style="height: 150px; overflow-x:auto;">
+        <tr>
+          <td class="top">Top</td>
+          <td class="middle">Middle</td>
+          <td class="bottom">Bottom</td>
+        </tr>
+      </table>
+    </div>
+    <div class="paragraph">
+      <p>Vertical align property does not act the same way for all elements.
+        For example, some additional CSS styling is needed for div elements.</p>
+      <div class="main">
+        <div class="para">
+          This text is aligned to the vertical-middle.
+        </div>
+      </div> <br>
+      <span class="code_example">.main {
+        height: 150px; width: 400px;
+        background-color: LightSkyBlue;
+        display: inline-table;
+        } <br>
+        .paragraph {
+        display: table-cell;
+        vertical-align: middle;
+        } </span>
+      <span class="e">display: inline-table;</span> and <span class="e">display: table-cell;</span> styling rules are applied to make the vertical-align property work with divs.
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        text-decoration
+      </div>
+      <p>The text-decoration property specifies how the text will be decorated.
+        Commonly used values are: <br>
+        <span class="e"> none</span> - The default value, this defines a normal text <br>
+        <span class="e"> inherit</span> - Inherits this property from its parent element <br>
+        <span class="e">overline</span> - Draws a horizontal line above the text <br>
+        <span class="e"> underline</span>- Draws a horizontal line below the text <br>
+        <span class="e"> line-through</span> - draws a horizontal line through the text (substitutes the HTML <span class="e">|s|</span> tag) <br>
+        You can combine the <span class="e">underline</span>, <span class="e">overline</span>,
+        or <span class="e">line-through</span> values in a space-separated list to add multiple decoration lines.
+        <span class="code_example"> text-decoration: underline;</span>
+
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="none">This is default style of the text (none).</p>
+      <p class="inherit">This text inherits the decoration of the parent.</p>
+      <p class="overline">This is overlined text.</p>
+      <p class="underline">This is underlined text.</p>
+      <p class="line-through">This is lined-through text.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Indenting the Text
+      </div>
+      <p>The text-indent property specifies how much horizontal space should be left before the beginning of the first line of the text.
+        Property values are <span class="e">length</span> (px, pt, cm, em, etc.), <span class="e">%</span>, and <span class="e">inherit</span>.</p>
+      <span class="code_example"> text-intent: 60px;</span>
+    </div>
+    <div class="paragraph">
+      <p class="intent">This is an example of
+        <strong>text-indent </strong> property.
+        First line of our text is indented to the right in 60px.
+        Besides pixels you can also use other measurement units,
+        like pt, cm, em, etc.
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        text-shadow
+      </div>
+      <p>The text-shadow property adds shadow to text.
+        It takes four values: the first value defines the distance of the shadow in the <span class="e">x (horizontal) direction</span>,
+        the second value sets the distance in the <span class="e">y (vertical) direction</span>,
+        the third value defines the <span class="e">blur</span> of the shadow, and the fourth value sets the <span class="e">color</span>.</p>
+      <span class="code_example">text-shadow: 5px 2px 4px grey; <br>
+        5px – the X-coordinate <br>
+        2px – the Y-coordinate <br>
+        4px – the blur radius <br>
+        grey – the color of the shadow</span>
+    </div>
+    <div class="paragraph">
+      <p class="shadow">Text-shadow example</p>
+      <p class="blur">Text-shadow with blur effect</p>
+    </div>
+
+
+
+    <div class="paragraph">
+      <div class="baslik">
+        text-transform
+      </div>
+      <p>The text-transform CSS property specifies how to capitalize an element's text.
+        For example, it can be used to make text appear with each word capitalized.
+        Using text-transform property you can make text appear in all-uppercase or all-lowercase.
+        <span class="code_example">text-transform: capitalize;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="capitalize">
+        <b>Capitalize</b> value transforms the first
+        character in each word to uppercase;
+        all other characters remain unaffected.
+      </p>
+      <p class="uppercase"><b>Uppercase</b> value transforms all characters to uppercase.</p>
+      <p class="lowercase"><b>Lowercase</b> value transforms all characters to lowercase.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        letter-spacing
+      </div>
+      <p>The letter-spacing property specifies the <span class="e">space between characters</span> in a text. The values can be set as: <br>
+        -<span class="e">normal</span> defines the default style with no extra space between characters <br>
+        - <span class="e">length</span> defines an extra space between characters using measurement units like px, pt, cm, mm, etc.; <br>
+        - <span class="e">inherit</span> inherits the property from its parent element;</p>
+      For defining an extra space between characters, negative values are also permitted.
+      <span class="code_example"> letter-spacing:4px;</span>
+    </div>
+    <div class="paragraph">
+      <p class="normalspacing">This paragraph has no additional letter-spacing applied.</p>
+      <p class="positive ">This paragraph is letter-spaced at 4px.</p>
+      <p class="negative">This paragraph is letter-spaced at -1.5px</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        word-spacing
+      </div>
+      <p>The word-spacing property specifies the <span class="e">space between words</span> in a text.
+        Just like the letter-spacing property, you can set the word-spacing values as
+        <span class="e">normal</span>, <span class="e">length</span>, and <span class="e">inherit</span>.
+        When a weird spacing is used, and it is necessary to keep the selected paragraph with normal word spacing, the normal option is usually used.
+        To define an extra space between words, you can use positive measurement values like
+        <span class="e">px</span>, <span class="e">pt</span>, <span class="e">pc</span>, <span class="e">cm</span>, <span class="e">mm</span>,
+        <span class="e">inches</span>,<span class="e">em</span>, and <span class="e">ex</span>.
+        Negative values are also permitted.
+        <span class="code_example">word-spacing: 20px;</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p class="normalwordspacing">This paragraph has no additional word-spacing applied.</p>
+      <p class="pxwordspacing">This paragraph is word-spaced at 30px.</p>
+      <p class="positivewordspacing">This paragraph is word-spaced at 20px.</p>
+      <p class="negativewordspacing">This paragraph is word-spaced at -5px.</p>
+
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        white-spacing
+      </div>
+      <p>The white-space property specifies how white-space inside an element is handled.
+        The values can be set as <span class="e">normal</span>, <span class="e">inherit</span>, <span class="e">nowrap</span>, etc.
+        The <span class="e">nowrap</span> value makes the text continue on the same line until a <br> tag is encountered,
+        and also collapses all sequences of whitespace into a single whitespace.</p>
+      <span class="code_example"> white-space:nowrap;</span>
+    </div>
+    <div class="paragraph">
+      <p class="whitespace">
+        This paragraph has multiple spaces and <br>
+        a line break, but it will be ignored, <br>
+        as we used the <b>nowrap</b> value.
+      </p>
+      <p><span style="color:red; font-style:italic"> <b>normal</b> used instead of <b>nowrap</b> for <b>responsive</b> design ^^</span></p>
+    </div>
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#three')">3) Properties</h1>
+  <div id="three">
+
+    <div class="paragraph">
+      <div class="baslik">
+        The CSS Box Model
+      </div>
+      <p>All HTML elements can be considered as boxes.
+        The CSS box model represents the design and layout of the site.
+        It consists of <span class="e">margins</span>, <span class="e">borders</span>,
+        <span class="e">paddings</span>, and the actual <span class="e">content</span>. <br>
+        The properties work in the same <b>order</b>: <span class="e">top</span>, <span class="e">right</span>,
+        <span class="e">bottom</span>, and <span class="e">left</span>. <br>
+        <b> The image below illustrates the box model:</b>
+      </p>
+      <img src=resources/images/css/boxmodel.png alt="boxmodel.png" width="60%x" style="padding-bottom:5px;" />
+    </div>
+    <div class="paragraph">
+      <b>Total Width of an Element</b>
+      <p>When working with boxes, it is important to understand how the total width and height of an element is calculated. <br>
+        The total width is the sum of left and right margins, left and right borders, left and right paddings, and the actual width of the content. <br>
+        Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Borders
+      </div>
+      <p>The CSS border property allows you to customize the borders of HTML elements.
+        In order to add a border to the element,
+        you need to specify the <span class="e">size</span>, <span class="e">style</span>, and <span class="e">color</span> of the border.
+        In CSS, it is possible to specify different borders for different sides, using the following properties: border-top-style,
+        border-right-style, border-bottom-style, and border-left-style for the corresponding sides.</p>
+      <span class="code_example"> border: 5px solid red; border-style: dotted;</span>
+    </div>
+
+    <div class="paragraph">
+      <p class="solidborder">This is an example of a red - solid border.</p>
+      <p class="firstsolidborder">Border width of this paragraph is set to 2px.</p>
+      <p class="secondsolidborder"> Border width of this paragraph is set to 15px. </p>
+      <p class="none">This paragraph has no border.</p>
+      <p class="dotted">This is a dotted border.</p>
+      <p class="dashed">This is a dashed border.</p>
+      <p class="double">This is a double border.</p>
+      <p class="groove">This is a grooved border.</p>
+      <p class="ridge">This is a ridged border.</p>
+      <p class="inset">This is an inset border.</p>
+      <p class="outset">This is an outset border.</p>
+      <p class="hidden">This is a hidden border.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        width - height and background-color
+      </div>
+      <p> <span class="code_example">max-width:90%; height:90px; background-color: aqua;</span> </p>
+      <div style="max-width:900%; height:90px; background-color: aqua; margin:10px;">
+
+      </div>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        background-image
+      </div>
+      <p>The <span class="e">background-image</span> property sets one or several background images in an element.
+        The <span class="e">url</span> specifies the path to the image file. Both relative and absolute paths are supported.
+        By default, a background-image is placed at the top-left corner of an element,
+        and is repeated both vertically and horizontally to cover the entire element.
+        To specify more than one image, just separate the URLs with <span class="e">commas</span>.</p>
+      <span class="code_example">body{ background-image: url("bg.png"); }</span>
+    </div>
+
+    <div class="paragraph">
+      <b>The background-repeat Property</b>
+      <p>The background repeat property specifies how background images are repeated. <br>
+        A background image can be repeated along the <span class="e">horizontal axis</span>,
+        the <span class="e">vertical axis both axes</span>, or <span class="e">not repeated at all</span>.
+        The <span class="e">repeat-x</span> will repeat a background image only <span class="e">horizontally</span>. <br>
+        The <span class="e">repeat-y</span> will repeat a background image only <span class="e">Vertically</span>. <br>
+        If you want the image to be shown only once, use the <span class="e">no-repeat</span> value.
+        <span class="code_example">body { background-image: url("bg.png");background-repeat: repeat-x; } </span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <b>The background-attachment Property</b>
+      <p>The background-attachment property sets whether a background image is fixed or scrolls with the rest of the page.
+        Even if an element has a scrolling mechanism, a "fixed" background doesn't move with the element.</p>
+      <p>You can also set the background-attachment to <span class="e">inherit</span> or <span class="e">scroll</span>. <br>
+        When you set the background-attachment to <span class="e">inherit</span>, it will inherit the value from its parent element. <br>
+        When you set the background-attachment to <span class="e">scroll</span>, the background image will scroll with the rest of the content.
+        <span class="code_example">body { background-image: url("bg.png"); background-repeat: no-repeat;background-attachment: scroll; }</span>
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Lists
+      </div>
+      <p>The CSS list properties allow us to set different list item markers. In HTML, there are two types of lists:
+        <span class="e"> unordered lists</span> (
+        |ul|) - the list items are marked with bullets
+        <span class="e"> ordered lists</span> (|ol|) - the list items are marked with numbers or letters
+        With CSS, lists can be styled further, and images can be used as the list item marker.
+        One of the ways is to use the <span class="e">list-style-type</span> property,
+        which can be set to <span class="e">circle</span>, <span class="e">square</span>,
+        <span class="e">decimal</span>, <span class="e">disc</span>, <span class="e">lower-alpha</span>, etc.
+        <span class="code_example"> ul{ list-style-type: square; } </span>
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <ol class="lower-alpha">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ol>
+      <ul class="circle">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ul>
+      <ul class="square">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ul>
+    </div>
+    <div class="paragraph">
+      <b>The List Image and Position</b>
+      <p>There are also other list properties, such as: <br>
+        <span class="e"> list-style-image</span> - specifies an image to be used as the list item marker. <br>
+        <span class="e"> list-style-position</span> - specifies the position of the marker box (inside, outside). <br>
+        "list-style-position: <span class="e">outside</span>" is the default value.
+        <span class="code_example"> ul { list-style-image: url("image.jpg"); list-style-position: inside; }</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <b>The list-style Property</b>
+      <p>The <span class="e">list-style</span> property is a shorthand property for setting list-style-type, list-style-image and list-style-position. <br>
+        It is used to set <span class="e">all</span> of the list properties in <span class="e">one declaration</span>. <br>
+        If one of the property values are missing, the default value for the missing property will be inserted, if any.
+        <span class="code_example"> ul{ list-style: square outsside none; }</span>
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Tables
+      </div>
+      <p>The look of an HTML table can be greatly improved with CSS.
+        The <span class="e">border-collapse</span> property specifies whether the table borders are collapsed into a single border or separated as default.
+        If the borders are separate, the <span class="e">border-spacing</span> property can be used to change the spacing.
+        <span class="code_example"> table { border-collapse: separate; border-spacing: 20px 40px;} </span>
+      </p>
+      <table border="1" style="margin-bottom:5px;">
+        <tr>
+          <td>Red</td>
+          <td>Green</td>
+        </tr>
+        <tr>
+          <td>Blue</td>
+          <td>Yellow</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="paragraph">
+      <b>The caption-side Property</b>
+      <p>The <span class="e">caption-side</span> property specifies the position of a table caption.
+        The values can be set as <span class="e">top</span> or <span class="e">bottom</span>.
+        <span class="code_example"> caption { caption-side: top; } </span>
+      </p>
+      <table border="1">
+        <caption>Some of Our Courses</caption>
+        <tr>
+          <th>Course name</th>
+          <th>Lessons</th>
+          <th>Quizzes</th>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>81</td>
+          <td>363</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>48</td>
+          <td>144</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>38</td>
+          <td>119</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>70</td>
+          <td>174</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="paragraph">
+      <b>The empty-cells property</b>
+      <p>The <span class="e">empty-cells</span> property specifies whether or not to display borders and background on empty cells in a table.
+        Possible values are: <br>
+        <span class="e"> show</span>: the borders of an empty cell are rendered <br>
+        <span class="e"> hide</span>: the borders of an empty cell are not drawn
+        <span class="code_example"> table { border-collapse: separate;empty-cells: hide; }</span>
+      </p>
+      <table border="1">
+        <tr>
+          <td>HTML</td>
+          <td>CSS</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td></td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="paragraph">
+      <b>The table-layout Property</b>
+      <p>The <span class="e">table-layout</span> specifies how the width of table columns is calculated. The possible values are: <br>
+        <span class="e">auto</span> - when column or cell width are not explicitly set,
+        the column width will be in proportion to the amount of content in the cells that make up the column. <br>
+        <span class="e">fixed</span> - when column or cell width are not explicitly set,
+        the column width will not be affected by the amount of content in the cells that make up the column. <br>
+        The table layout is set to <span class="e">auto</span> by default.
+      </p>
+      <p>Table-layout is set to <b>auto</b> </p>
+      <table class="auto">
+        <tr>
+          <td width="10%">500.000.000.000.000 </td>
+          <td width="90%">20.000</td>
+        </tr>
+      </table>
+
+      <p>Table-layout is set to <b>fixed</b> </p>
+      <table class="fixed">
+        <tr>
+          <td width="10%">500.000.000.000.000</td>
+          <td width="90%">20.000</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Links
+      </div>
+      <p>Links can be styled with any CSS property (e.g., color, font-family, background, etc.). <br>
+        In addition, links can be styled differently, depending on what state they are in. The following pseudo selectors are available: <br>
+        <span class="e"> a:link</span> - defines the style for normal unvisited links <br>
+        <span class="e"> a:visited</span> - defines the style for visited links <br>
+        <span class="e"> a:active</span> - a link becomes active once you click on it <br>
+        <span class="e"> a:hover</span> - a link is hovered when the mouse is over it <br>
+        The example below creates a link that will change the style when the <span class="e">mouse</span> is <span class="e">moved over it</span>.
+        <span class="code_example"> a:hover { color:red; }</span>
+      </p>
+      <p><a href="http://akanahmet.github.io" target="_blank">
+          This link is hovered when we mouse over it
+        </a></p>
+      <p>When setting the style for several link states, there are some <span class="e">order rules</span>: <br>
+        - <span class="e"> a:hover</span> <b>MUST</b> come <b>after</b> <span class="e">a:link</span> and <span class="e">a:visited</span> <br>
+        - <span class="e">a:active</span> <b>MUST</b> come <b>after</b> <span class="e">a:hove</span></p>
+    </div>
+    <div class="paragraph">
+      <b>Links' Text Decoration</b>
+      <p>By default, text links are underlined by the browser. <br>
+        One of the most common uses of CSS with links is to <span class="e">remove the underline</span>. <br>
+        In the example below, the <span class="e">text-decoration</span> property is used to remove the underline.
+        <span class="code_example"> a:link { text-decoration: none; }</span>
+      </p>
+      <p><a href="http://akanahmet.github.io" target="_blank" class="second">
+          This link has no underline.
+        </a></p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Customizing the Mouse Cursor
+      </div>
+      <p>CSS allows you to set your desired cursor style when you mouse over an element. <br>
+        For example, you can change your cursor into a hand icon, help icon, and much more, rather than using the default pointer. <br>
+        In the example below, the mouse pointer is set to a help icon when we mouse over the span element:
+        <span class="code_example" style="cursor:help;"> |span style="cursor:help;"> Do you need help? |/span| </span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <b>The cursor Property Values</b>
+      <p>There are numerous other possible values for the <span class="e">cursor</span> property, such as: <br>
+        <span class="e"> default</span> - default cursor <br>
+        <span class="e"> crosshair</span> - cursor displays a crosshair <br>
+        <span class="e"> pointer</span> - cursor displays hand icon <br>
+        The list of possible values is quite long.
+      </p>
+      <img src="resources/images/css/cursor.png" alt="cursor styles" style="margin-bottom:9px;" />
+    </div>
+
+
+
+
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style=" cursor: pointer;" onclick="deneme('#four')">4) Positioning and Layout</h1>
+  <div id="four">
+
+    <div class="paragraph">
+      <p></p>
+    </div>
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#five')">5) CSS3 Basics</h1>
+  <div id="five">
+
+    <div class="paragraph">
+      <p></p>
+    </div>
+
+  </div>
+  <hr>
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#six')">6) Gradients & Backgrounds</h1>
+  <div id="six">
+
+    <div class="paragraph">
+      <p></p>
+    </div>
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#seven')">7) Transitions & Transforms</h1>
+  <div id="seven">
+
+    <div class="paragraph">
+      <p></p>
+    </div>
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1 style="cursor: pointer;" onclick="deneme('#eight')">8) CSS Filters</h1>
+  <div id="eight">
+
+
+    <div class="paragraph">
+      <p></p>
+    </div>
+
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

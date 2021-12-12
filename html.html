@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!--   Atom editor used for this lesson , addionaly, atom-live-server(ctrl-alt-l), autosave(settings->enabled) beautify(ctrl+alt+b), activate-power-mode, emmet, hydrogen packages installed. -->
+<!--For Space = &nbsp;  ||||||| For Tab = &emsp; -->
+<html lang="en" dir="ltr">
+<!--  HyperText Markup Language , Last version is Html 5--->
+<!--  Best color codes on https://clrs.cc/ -->
+<!--  Free Images on https://unsplash.com/ -->
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="resources/images/html/favicon.png" type="image/x-icon" />
+  <title>Ahmet AKAN</title>
+  <style media="screen">
+    /*  INLINE(in element |div style="text-align:center;"|) or INTERNAL(|style||/style| tag between |head||head| tag) or EXTERNAL(Link to .css file) */
+    /* It's better to use EXTERNAL method because of Performance reasons. */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: red;
+      text-align: center;
+    }
+
+    p {
+      /* Style for all <p> tags  TAG */
+      text-align: center;
+    }
+
+    progress {
+      display: block;
+      margin: 0 auto;
+    }
+
+
+    #body {
+      /* Style which id = "body"  ID */
+      background-color: #3D9970;
+    }
+
+    #kedi {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #triangle,
+    #box,
+    #image,
+    #canvas2 {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .webStructure {
+      /* Style for which class = "webStructure" CLASS */
+      display: block;
+      margin: 0 auto;
+      /*for align center*/
+      max-width: 100%;
+      height: auto;
+      /*for responsive images */
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+    }
+  </style>
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+
+</head>
+
+<body id="body">
+
+  <header>
+    <img class="banner" src="resources/images/html/banner.jpg" alt="BannerLogo">
+  </header>
+
+  <p> This document following , <a href="https://www.sololearn.com/learning/1014" target="_blank"> SoloLearn HTML Course</a> </p>
+
+  <nav>
+    <table width="100%" border="15px">
+      <tr>
+        <td align="center" bgcolor="grey"><a href="style.html">CSS Page </td>
+        <td align="center" bgcolor="yellow"><a href="actions.html">JS Page </td>
+        <td align="center" bgcolor="green"> <a href="bootstrap.html">Bootstrap Page</td>
+        <td align="center" bgcolor="brown"><a href="https://akanahmet.github.io">My CV </td>
+      </tr>
+    </table>
+  </nav>
+  <H1 id="one">The Web Structure</h1> <!-- //////////////////////////////////////////// -->
+  <p>&emsp;The ability to code using HTML is essential for any web professional. Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.
+    HTML files are text files, so you can use any text editor to create your first webpage. HTML file names should end in either <b>.html</b> or <b>.htm</b> . </p>
+  <p>When writing HTML5 documents, one of the first new features that you'll notice is the doc type declaration: |!DOCTYPE HTML|</p>
+  <p>The character encoding (charset) declaration is also simplified: |meta charset="UTF-8"|</p>
+  <p> For favicon |link rel="icon" href="images/favicon.png" type="image/x-icon" /|</p>
+  <p> HTML is not a case sensitive language. Horizontal Lines : |hr| defines a thematic break. </p>
+
+  <img class="webStructure" src="resources/images/html/ContentModel.png" alt="ContentModel">
+  <br>
+  <img class="webStructure" src="resources/images/html/ContentModel2.png" alt="ContentModel2">
+  <br>
+  <img class="webStructure" src="resources/images/html/sablon.png" alt="sablon">
+
+  <hr>
+  <h2 id="two">Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
+  <p> <strong>HTML:</strong> Structure <br>
+    <strong>CSS:</strong> Presentation <br>
+    <strong>JavaScript: </strong>Behavior <br>
+    <strong>PHP or similar:</strong> Backend <br>
+    <strong>CMS:</strong> Content Management
+  </p>
+  <hr>
+  <h2>Text Formatting </h3> <!-- //////////////////////////////////////////// -->
+    <p>This is regular text.</p>
+    <p><b>This is bold text.</b></p>
+    <p><i>This is italic text.</i></p>
+    <p><big>This is big text.</big></p>
+    <p><small>This is small text.</small></p>
+    <p><strong>This is strong text.</strong></p>
+    <p><sub>This is subscripted text.</sub></p>
+    <p><ins>This is inserted text.</ins></p>
+    <p><del>This is deleted text.</del></p>
+    <hr>
+    <h2>Heading</h2> <!-- //////////////////////////////////////////// -->
+    <h1 style="color:blue">This is heading 1</h1>
+    <h2 style="color:blue">This is heading 2</h2>
+    <h3 style="color:blue">This is heading 3</h3>
+    <h4 style="color:blue">This is heading 4</h4>
+    <h5 style="color:blue">This is heading 5</h5>
+    <h6 style="color:blue">This is heading 6</h6>
+    <hr>
+    <h2 id="three">HTML Attributes</h2> <!-- //////////////////////////////////////////// -->
+    <p>&emsp;Attributes provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.
+      Attributes are always specified in the start tag, and they appear in <b>name="value"</b>pairs. An element's width and high can be defined using pixels or percentages. <b>width = "50px"</b> or <b>high = "50%"</b></p>
+    <p>HTML <b>Colors</b> are expressed as hexadecimal values. RGB color values are supported in all browsers.
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+      As you can see, there are 16 values there, 0 through F. Zero represents the lowest value, and F represents the highest.
+      Hex values are written using the hashtag symbol (#), followed by either three or six hex characters.</p>
+    <p>The <b>bgcolor</b> attribute can be used to change the web page's background color.</p>
+    <hr>
+    <h2>The |img|Tag</h2> <!-- //////////////////////////////////////////// -->
+    <p>The <b>|img|</b> tag is used to insert an image. It contains only attributes, and does not have a closing tag. The image's URL (address) can be defined using the src attribute.The alt attribute specifies an alternate text for an image.
+      <b><br>|img src="image.jpg" alt = "" |</b> o define the image size, use the width and height attributes.
+      The value can be specified in pixels or as a percentage. By default, an image has no borders. Use the border attribute within the image tag to create a border around the image.
+    </p>
+    <img id="kedi" src="resources/images/html/cat.jpg" alt=" " border="10px" width="250px" height="250px" />
+    <hr>
+    <h2>Links - The |a| Tag</h2> <!-- //////////////////////////////////////////// -->
+    <p>Links are also an integral part of every web page. You can add links to text or images that will enable the user to click on them in order to be directed to another file or webpage.
+      In HTML, links are defined using the <b>|a|</b> tag.Use the href attribute to define the link's destination address. To link an image to another document, simply nest the <b>|img|</b> tag inside <b>|a|</b> tags.</p>
+    <a href="https://www.google.com.tr">
+      <p style="color:grey "> <strong>Click here to href Google.</strong>
+        <p>
+    </a>
+
+    <a href="https://www.google.com.tr" target="_blank">
+      <p style="color:grey "> <strong>Click here to href Google in New Tab.</strong>
+        <p>
+    </a>
+    <p>The target attribute specifies where to open the linked document.
+      Giving a <b> _blank</b> value to your attribute will have the link open in a new window or new tab. A visited link is <ins>underlined</ins> and purple. </p>
+    <hr>
+    <h2>LISTS</h2> <!-- //////////////////////////////////////////// -->
+    <p>HTML <strong>Ordered List</strong> starts with the <b>|ol|</b> tag, and each list item is defined by the <b>|li|</b> tag. The list items will be automatically marked with <b>numbers</b>.</p>
+    <ol>
+      <li>Ordered List Item 1</li>
+      <li>Ordered List Item 2</li>
+      <li>Ordered List Item 3</li>
+    </ol>
+    <p>An <strong>Unordered List </strong> starts with the |ul| tag. The list items will be marked with <b>bullets</b>:</p>
+    <ul>
+      <li> Unordered List Item 1</li>
+      <li> Unordered List Item 2</li>
+      <li> Unordered List Item 3</li>
+    </ul>
+    <hr>
+    <h2>TABLES</h2> <!-- //////////////////////////////////////////// -->
+    <p>Tables are defined by using the <b>|table|</b> tag.
+      Tables are divided into table rows with the |tr| tag.
+      Table rows are divided into table columns (table data) with the <b>|td|</b> tag. Table data tags <b>|td|</b>act as data containers within the table.
+      They can contain all sorts of HTML elements, such as text, images, lists, other tables, and so on. A border can be added using the <b>border</b> attribute. Here is an example of a table with <b>four row</b> and <b>three columns:</b></p>
+    <table border="10px" align="center">
+      <tr bgcolor="red">
+        <td>Row 1 -Table Column 1</td>
+        <td>Row 1 -Table Column 2</td>
+        <td>Row 1 -Table Column 3</td>
+      </tr>
+      <tr bgcolor="yellow">
+        <td>Row 2 -Table Column 1</td>
+        <td>Row 2 -Table Column 2</td>
+      </tr>
+      <tr bgcolor="grey">
+        <td>Row 3 -Table Column 1</td>
+        <td colspan="2">Row 3 -Table Column 2(Colspan Power !)</td>
+      </tr>
+      <tr bgcolor="pink">
+        <td colspan="3">Row 4 -Table Column 1</td>
+      </tr>
+    </table>
+    <hr>
+    <h2>Inline and Block Elements</h2> <!-- //////////////////////////////////////////// -->
+    <h3 style="color:blue">Types of Elements :</h3>
+    <p>In HTML, most elements are defined as block level or inline elements. Block level elements start from a new line.</p>
+    <p>For example: |h1|, |form|, |li|, |ol|, |ul|, |p|, |pre|, |table|, |div|, etc.</p>
+    <p>Inline elements are normally displayed without line breaks. </p>
+    <p>For example: |b|, |a|, |strong|, |img|, |input|, |em|, |span|, etc. </p>
+    <p>The <b>|div|</b> element is a block-level element that is often used as a <b>container for other HTML elements.</b></p>
+    <p>When used together with some CSS styling, the <b>|div| </b> element can be used to style blocks of content:</p>
+
+    <div style="background-color:green; color:white;padding:20px">
+      <p>Div usage example :</p>
+      <p>style = "background-color:green; color : white; padding : 20px"</p>
+    </div>
+
+    <p>Similarly, the <b>|span|</b> element is an inline element that is often used as a container for some text.
+      When used together with CSS, the |span| element can be used to style <b>parts of the text:</b></p>
+    <p>Some <span style="color:red">Important</span> Message</p>
+    <p><span style="color:green">Summary:</span><br> The |div| element defines a block-level section in a document.
+    <p>The |span| element defines an inline section in a document.</p>
+    <p> Other elements can be used either as block level elements or inline elements. This includes the following elements:</p>
+    <p>APPLET - embedded Java applet </P>
+    <p> IFRAME - Inline frame </p>
+    <p>INS - inserted text </p>
+    <p> MAP - image map </p>
+    <p> OBJECT - embedded object </p>
+    <p> SCRIPT - script within an HTML document</p>
+    <p> You can insert inline elements inside block elements. For example, you can have multiple <b>|span|</b> elements inside a <b>|div|</b> element.
+      Inline elements cannot contain any block level elements.
+    </p>
+    <hr>
+    <h2>The |form| Element</h2> <!-- //////////////////////////////////////////// -->
+    <p>HTML forms are used to collect information from the user. Usually the form is submitted to a web page on a web server.</p>
+    <p>The <b>method attribute</b> specifies the HTTP method (<b>GET</b> or <b>POST</b>) to be used when forms are submitted. The name attribute specifies a name for a form.</p>
+    <p>|form action="url" method="GET"| OR |form action="url" method="POST"|</p>
+    <p>When you use <b>GET</b>, the form data will be visible in the page address.
+      Use <b>POST</b> if the form is updating data, or includes sensitive information (passwords).
+      POST offers better security because the submitted data is not visible in the page address.
+      After the form is submitted, the data should be processed on the server using a programming language, such as PHP.</p>
+    <p>To take in user input, you need the corresponding form elements, such as text fields.
+      The <b>|input|</b> element has many variations, depending on the type attribute. It can be a text, password, radio, URL, submit, etc.</p>
+    <p>The <b>autofocus</b> attribute makes the desired input focus when the form loads.</p>
+    <p>The <b>required</b> attribute is used to make the input elements required.</p>
+    <p>
+      <br> <b> HTML5 added several new input types:</b>
+      - color
+      - date
+      - datetime
+      - datetime-local
+      - email
+      - month
+      - number
+      - range
+      - search
+      - tel
+      - time
+      - url
+      - week
+
+      <br> <b> New input attributes in HTML5: </b>
+      - autofocus
+      - form
+      - formaction
+      - formenctype
+      - formmethod
+      - formnovalidate
+      - formtarget
+      - height and width
+      - list
+      - min and max
+      - multiple
+      - pattern (regexp)
+      - placeholder
+      - required
+      - step
+    </p>
+    <p>Note : Input types that are not supported by old web browsers, will behave as input type text.</p>
+    <p>The new <b>search input</b> type can be used to create a search box. The |datalist| tag can be used to define a list of pre-defined options for the search field:</p>
+    <div class="search" align="center"> Search for : <input type="search" name="searchitem" placeholder="Seach here.." list="colors">
+      <datalist id="colors">
+        <option value="Red"></option>
+        <option value="Orange"></option>
+        <option value="Blue"></option>
+        <option value="Green"></option>
+      </datalist>
+    </div>
+
+    <br>
+    <form action="https://google.com" align="center">
+      <span style="color:blue"> Email Input :&emsp;&nbsp;&nbsp; </span> <input type="email" placeholder="example@gmail.com" required> <br>
+      <span style="color:blue">Password Input : </span> <input type="password" placeholder="******" required> <br>
+      <button type="submit" name="button"> Submit</button>
+    </form>
+
+    <div style="text-align: center; width: 100%;">
+      <!-- Important  -->
+      <div style="margin: 0 auto; width:35%; text-align:left;">
+        <!-- Important  -->
+        <p>If we change the input type to <b>"radio"</b>, it allows the user select<b> only one </b> of a number of choices:</p>
+        <input type="radio" name="gender" value="Male">Male <br>
+        <input type="radio" name="gender" value="Female">Female <br>
+        <input type="radio" name="gender" value="dontWant">Dont want to give information <br>
+
+        <p>The type <b>"checkbox"</b> allows the user to select <b>more than one</b> option:</p>
+        <input type="checkbox" name="gender" value="Male">Male <br>
+        <input type="checkbox" name="gender" value="Female">Female <br>
+        <input type="checkbox" name="gender" value="dontWant">Dont want to give information <br>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Audio and Video Elements</h2> <!-- //////////////////////////////////////////// -->
+    <p>|<b>audio</b> autoplay loop controls| <br>
+      |source src="audio.mp3" type="audio/mp3"| <br>
+      |source src="audio.ogg" type="audio/ogg"| <br>
+      Audio element not supported by your browser <br>
+      |<b>/audio</b>| <br>
+      <span style="color:red;"> Replace </span> <b>audio</b> with <b>video</b> if needed. Use <b>|iframe|</b> element for Youtube videos.
+    </p>
+    <p>Attributes : <span style="color:brown;"> controls => </span> Specifies that media controls should be displayed (such as a play/pause button, etc.)</p>
+    <p> <span style="color:brown;"> autoplay => </span> When this attribute is defined, media starts playing as soon as it is ready, without asking for the visitor's permission.</p>
+    <p> <span style="color:brown;"> loop => </span>This attribute is used to have the audio replay every time it is finished.</p>
+    <p>Supported audio formats: MP3, WAV, and OGG. Supported video formats: MP4,OGG</p>
+    <p>Another aspect that the audio and video elements have in common is that the major browsers do not all support the same file types. If the browser does not support the first media type, it will try the next one.</p>
+
+
+
+
+    <audio style="display:block; margin: 0 auto;" src="music/Music_www.bensound.com.mp3" controls>
+      Audio element not supported by your browser.
+    </audio>
+    <a href="https:www.bensound.com" target="_blank">
+      <p>Music = www.bensound.com</p>
+    </a>
+    <br>
+    <video width="300px" style="display:block; margin: 0 auto; max-width:100% " src="video/Programmer_life_Programming_Language _Free_HD_Video_no_copyright.mp4" loop controls>
+      Video element not supported by your browser.
+    </video>
+    <br>
+    <iframe style="display:block; margin: 0 auto;" src="https://www.youtube.com/embed/oe70Uhjc_F4?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      Youtube element not supported by your browser.
+    </iframe>
+    <hr>
+
+    <h2>Progress Bar</h2> <!-- //////////////////////////////////////////// -->
+    <p> The |progress| element provides the ability to create progress bars on the web.
+      The progress element can be used within headings, paragraphs, or anywhere else in the body.
+      Use the |progress| tag in conjunction with <b> JavaScript </b> to <b> dynamically display </b> a task's progress.
+      Progress Element Attributes : <br>
+      <b>Value:</b> Specifies how much of the task has been completed. <br>
+      <b>Max:</b> Specifies how much work the task requires in total. <br>
+
+    </p>
+    <progress value="35" min="0" max="100">35%</progress>
+
+    <hr>
+
+    <h2>Web Storage API</h2> <!-- //////////////////////////////////////////// -->
+    <p>With HTML5 web storage, websites can store data on a user's local computer.
+      Before HTML5, we had to use <b> JavaScript cookies </b> to achieve this functionality. </p>
+    <p>Local storage is per domain. All pages from one domain can store and access the same data.</p>
+    <p><span style="color:brown"> <i> The Advantages of Web Storage => </i> </span> </p>
+    <p>- More secure </p>
+    <p>- Faster </p>
+    <p>- Stores a larger amount of data </p>
+    <p>- Stored data is not sent with every server request</p>
+    <p>There are two types of web storage objects: </p>
+    <p> <b> - sessionStorage() : </b> Session Storage is destroyed once the user closes the browser. </p>
+    <p> <b>- localStorage() : </b> Local Storage stores data with no expiration date. </p>
+    <p> You need to be familiar with basic JavaScript in order to understand and use the API.</p>
+    <p>The syntax for web storage for both local and session storage is very simple and similar.
+      The data is stored as <b> key/value </b> pairs.
+      <br> <b> Storing a Value: </b>
+      localStorage.setItem("key1", "value1");
+      <br> <b> Getting a Value: </b>
+      <ins></ins> localStorage.getItem("key1");
+      <br> <b> Removing a Value: </b>
+      localStorage.removeItem("key1");
+      <br> <b> Removing All Values: </b>
+      localStorage.clear();
+      <br> The same syntax applies to the session storage, with one difference: Instead of localStorage, sessionStorage is used.
+    </p>
+    <hr>
+
+    <h2>Geolocation API</h2> <!-- //////////////////////////////////////////// -->
+    <p>In HTML5, the Geolocation API is used to obtain the user's geographical location.
+      Since this can compromise user privacy, the option is not available unless the user approves it.
+      Geolocation is much more accurate for devices with GPS, like smartphones and the like.
+      The Geolocation API’s main method is <b>getCurrentPosition </b>, which retrieves the current geographic location of the user's device.
+      The <b>getCurrentPosition() </b> method returns an object if it is successful. The latitude, longitude, and accuracy properties are always returned.
+      <span style="color:red"> navigator.geolocation.getCurrentPosition(); </span>
+    </p>
+    <p>Parameters: <br>
+      <b>showLocation (mandatory):</b> Defines the callback method that retrieves location information. <br>
+      <b>ErrorHandler(optional):</b> Defines the callback method that is invoked when an error occurs in processing the asynchronous call. <br>
+      <b>Options (optional): </b>Defines a set of options for retrieving the location information.
+    </p>
+    <p>User location can be presented in two ways: <b> Geodetic </b> and <b> Civic</b>.
+
+      <br>The <b>geodetic</b> way to describe position refers directly to latitude and longitude.
+      <br>The <b>civic</b> representation of location data is presented in a format that is more easily read and understood by the average person.
+    </p>
+    <img width="250px" height="250px" style="  display: block;  margin: 0 auto;" src="resources/images/html/geolocation.png" alt="Civic and Geodetic diffrences.">
+    <hr>
+
+    <h2 id="four">Drawing Shapes - SVG </h2> <!-- //////////////////////////////////////////// -->
+    <p> <b>SVG</b> stands for <b>Scalable Vector Graphics</b>, and is used to draw shapes with HTML-style markup.
+      It offers several methods for drawing paths, boxes, circles, text, and graphic images.
+      SVG is not pixel-based, so it can be magnified infinitely with no loss of quality.SVG defines vector-based graphics in XML format.Every element and every attribute in SVG files can be animated.
+      An SVG image can be added to HTML code with just a basic image tag that includes a source attribute pointing to the image:<br> |img src="image.svg" alt="" height="300" |</p>
+
+    <svg width="150" height="200">
+      <circle cx="80" cy="80" r="50" fill="blue">
+    </svg>
+    <svg width="100" height="200">
+      <rect x="0" y="30" width="125" height="100" stroke="black" fill="aqua" stroke-width="1">
+    </svg>
+    <svg width="100" height="200">
+      <line x1="10" y1="50" x2="100" y2="100" style="stroke:#000000; stroke-linecap:round;
+        stroke-width:20">
+    </svg>
+    <svg width="150" height="200">
+      <polygon points="0 100, 100 100, 150 0" style="fill: green; stroke:black;">
+    </svg>
+    <svg width="100" height="200">
+      <polyline points="10 10 15 20 20 15 25 30 30 25 5 40 40 35 45 50 50 45" stroke="orange" fill="transparent" stroke-width="5" />
+    </svg>
+    <svg width="100" height="200">
+      <ellipse cx="200" cy="75" rx="150" ry="70" style="fill:green" />
+    </svg>
+    <svg width="300" height="200">
+      <ellipse cx="300" cy="75" rx="150" ry="70" style="fill:black" />
+    </svg>
+
+    <p><span style="color:red"><b>Shape Animations</b></span></p>
+    <p>SVG animations can be created using the |animate| element.
+      <br> <b>attributeName:</b> Specifies which attribute will be affected by the animation
+      <br> <b> from:</b> Specifies the starting value of the attribute
+      <br> <b> to:</b> Specifies the ending value of the attribute
+      <br> <b> dur:</b> Specifies how long the animation runs (duration)
+      <br> <b> fill: </b>Specifies whether or not the attribute's value should return to its initial value when the animation is finished (Values: "remove" resets the value; "freeze" keeps the “to value”)
+      <br> <b> repeatCount:</b> Specifies the repeat count of the animation. To repeat the animation indefinitely, use the value <b>"indefinite"</b> for the repeatCount attribute.
+    </p>
+    <svg width="480" height="150">
+      <rect width="150" height="150" fill="#FFDC00">
+        <animate attributeName="x" from="0" to="480" dur="4.8s" fill="freeze" repeatCount="indefinite" />
+      </rect>
+    </svg>
+
+    <svg width="480" height="150">
+      <rect width="150" height="150" fill="#01FF70">
+        <animate attributeName="x" from="480" to="0" dur="4.8s" fill="freeze" repeatCount="indefinite" />
+      </rect>
+    </svg>
+
+    <p><span style="color:red"><b>Paths</b></span></p>
+    <p>The |path| element is used to define a path.
+
+      The following commands are available for path data:
+      <br> <b> M:</b> moveto
+      <br> <b> L:</b> lineto
+      <br> <b> H:</b> horizontal lineto
+      <br> <b> V:</b> vertical lineto
+      <br> <b> C:</b> curveto
+      <br> <b> S:</b> smooth curveto
+      <br> <b> Q:</b> quadratic Bézier curve
+      <br> <b> T:</b> smooth quadratic Bézier curveto
+      <br> <b> A:</b> elliptical Arc
+      <br> <b> Z:</b> closepath
+    </p>
+    <p>All of the above commands can also be expressed with lower case letters. When <b>capital</b> letters are used, it indicates <b>absolute position</b>; <b>lower case</b> indicates <b>relative position</b>.</p>
+    <svg id="triangle" width="200" height="200">
+      <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+    </svg>
+
+    <hr>
+    <h2>The |canvas| Element</h2> <!-- //////////////////////////////////////////// -->
+    <p>The HTML canvas is used to draw graphics that include everything from simple lines to complex graphic objects.
+      The |canvas| element is <b>only a container </b> for graphics. You must use a script to actually draw the graphics (usually JavaScript).
+      The |canvas| element must have an id attribute so it can be referred to by JavaScript. The HTML canvas is a two-dimensional grid.
+      The upper-left corner of the canvas has the coordinates (0,0).
+      X coordinate increases to the right.
+      Y coordinate increases toward the bottom of the canvas.</p>
+
+    <canvas id="canvas1" width="1200" height="50"> </canvas>
+
+    <script>
+      var can = document.getElementById("canvas1");
+      var ctx = can.getContext("2d");
+      ctx.fillStyle = "rgba(0, 200, 0, 1)";
+      for (var i = 0; i < 5; i++) {
+        ctx.fillRect(36, 10, 22, 22);
+        ctx.translate(50, 0);
+      }
+    </script>
+
+    <p>The canvas supports various other methods for drawing: <br>
+
+      <span style="color:brown"> Draw a Line </span>
+      <br> <b> moveTo(x,y):</b> Defines the starting point of the line.
+      <br> <b> lineTo(x,y):</b> Defines the ending point of the line. <br>
+
+      <span style="color:brown"> Draw a Circle </span>
+      <br> <b> beginPath():</b> Starts the drawing.
+      <br> <b> arc(x,y,r,start,stop):</b> Sets the parameters of the circle.
+      <br> <b> stroke():</b> Ends the drawing. <br>
+
+      <span style="color:brown"> Gradients </span>
+      <br> <b> createLinearGradient(x,y,x1,y1):</b> Creates a linear gradient.
+      <br> <b> createRadialGradient(x,y,r,x1,y1,r1):</b> Creates a radial/circular gradient. <br>
+
+      <span style="color:brown"> Drawing Text on the Canvas </span>
+      <br> <b> Font:</b> Defines the font properties for the text.
+      <br> <b> fillText(text,x,y):</b> Draws "filled" text on the canvas.
+      <br> <b> strokeText(text,x,y):</b> Draws text on the canvas (no fill).
+    </p>
+
+    <p> <span style="color:brown"> Canvas Transformations </span> </p>
+    <p>The <b> translate(x,y) </b>method is used to move the Canvas.
+      x indicates how far to move the grid horizontally, and y indicates how far to move the grid vertically.</p>
+    <p>The <b> rotate(radians) </b> method is used to rotate the Canvas.</p>
+    <p>The <b> scale(ratex,ratey) </b> method scales the current drawing. It takes two parameters:
+      - The number of times by which the image should be scaled in the X-direction.
+      - The number of times by which the image should be scaled in the Y-direction</p>
+
+    <canvas id="canvas2" width="350" height="350"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas2');
+      ctx = canvas.getContext('2d');
+      ctx.font = "bold 22px Tahoma";
+      ctx.textAlign = "start";
+      ctx.fillStyle = "rgba(219, 116, 250,1)";
+      ctx.fillText("start", 10, 30);
+      ctx.translate(100, 150);
+      ctx.fillText("after translate", 0, 0);
+      ctx.rotate(1);
+      ctx.fillText("after rotate", 0, 0);
+      ctx.scale(1.5, 4);
+      ctx.fillText("after scale", 0, 20);
+    </script>
+
+    <p> <span style="color:brown"> <b>SVG vs. Canvas</b> </span> </p>
+    <p>You can actually use both SVG and canvas on the same page, if needed. However, you cannot just draw SVG onto a canvas, or vice-versa.
+      <br> <b><i><ins> Canvas </b></i></ins>
+      <br> - Elements are drawn programmatically
+      <br> - Drawing is done with pixels
+      <br> - Animations are not built in
+      <br> - High performance for pixels-based drawing operations
+      <br> - Resolution dependent
+      <br> - No support for event handlers
+      <br> - You can save the resulting image as .png or .jpg
+      <br> - Well suited for graphic-intensive games
+
+      <br> <b><i><ins> SVG </b></i></ins>
+      <br> - Elements are part of the page's DOM (Document object model)
+      <br> - Drawing is done with vectors
+      <br> - Effects, such as animations are built in
+      <br> - Based on standard XML syntax, which provides better accessibility
+      <br> - Resolution independent
+      <br> - Support for event handlers
+      <br> - Not suited for game applications
+      <br> - Best suited for applications with large rendering areas (for example, Google Maps)
+    </p>
+    <hr>
+
+    <h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
+    <p>Drag & Drop animals image into frame.</p>
+    <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid black;
+   width:250px; height:150px"></div>
+
+    <img id="image" src="resources/images/html/sample.png" draggable="true" ondragstart="drag(event)" width="250" height="150" alt="resource = https://pngtree.com/so/animal-series" />
+    <hr>
+
+    <img src="resources/images/html/certificate.jpg" width="200px" height="100px" style="  display: block;  margin: 0 auto;" alt=" certificate.jpg" draggable="true">
+    <p>CSS and Javascript (ECMAScript 6) improvements will be added. </p>
+    <hr>
+    <footer>
+      <p>The following information is usually provided between |footer| tags:
+        - Contact Information
+        - Privacy Policy
+        - Social Media Icons
+        - Terms of Service
+        - Copyright Information
+        - Sitemap and Related Documents</p>
+    </footer>
+</body>
+
+</html>
