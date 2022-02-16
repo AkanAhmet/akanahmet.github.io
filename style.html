@@ -9,16 +9,17 @@
   <link rel="icon" href="/resources/images/html/favicon.png">
   <link rel="stylesheet" href="css/css.css">
   <script type="text/javascript" src="js/js.js"> </script>
+  
   <script>
     $(document).ready(function() {
-      var liste = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
-      for (var i = 1; i < liste.length; i++) {
-        deneme(liste[i]);
+      var list = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
+      for (var i = 1; i < list.length; i++) {
+        toggleTitles(list[i]);
       }
-      //  alert("Click Headers to View Content");
+        alert("Click Titles to toggle Content");
     });
 
-    function deneme(id) {
+    function toggleTitles(id) {
       $(id).toggle();
     }
   </script>
@@ -41,7 +42,7 @@
             <a class="nav-link" href="html.html">HTML-PAGE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://akanahmet.github.io">CV</a>
+            <a class="nav-link" href="http://akanahmet.github.io">MY RESUME</a>
           </li>
 
 
@@ -51,7 +52,7 @@
     </div>
   </nav>
 
-  <h1 style="cursor: pointer;" onclick="deneme('#one')">1) Welcome to CSS</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#one')">1) Welcome to CSS</h1>
   <div id="one">
     <div class="paragraph">
       <p>
@@ -96,7 +97,7 @@
 
   <!--    ------------------------------------------------------------------------------------------------------------------------------------ -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#two')">2) Working with Text</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#two')">2) Working with Text</h1>
   <div id="two">
 
     <div class="paragraph">
@@ -462,7 +463,7 @@
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#three')">3) Properties</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#three')">3) Properties</h1>
   <div id="three">
 
     <div class="paragraph">
@@ -773,9 +774,9 @@
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style=" cursor: pointer;" onclick="deneme('#four')">4) Positioning and Layout</h1>
+  <h1 style=" cursor: pointer;" onclick="toggleTitles('#four')">4) Positioning and Layout</h1>
   <div id="four">
-
+      Coming soon..
     <div class="paragraph">
       <p></p>
     </div>
@@ -785,9 +786,9 @@
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#five')">5) CSS3 Basics</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#five')">5) CSS3 Basics</h1>
   <div id="five">
-
+      Coming soon..
     <div class="paragraph">
       <p></p>
     </div>
@@ -796,9 +797,9 @@
   <hr>
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#six')">6) Gradients & Backgrounds</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#six')">6) Gradients & Backgrounds</h1>
   <div id="six">
-
+     Coming soon..
     <div class="paragraph">
       <p></p>
     </div>
@@ -808,9 +809,9 @@
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#seven')">7) Transitions & Transforms</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#seven')">7) Transitions & Transforms</h1>
   <div id="seven">
-
+      Coming soon..
     <div class="paragraph">
       <p></p>
     </div>
@@ -820,9 +821,9 @@
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#eight')">8) CSS Filters</h1>
+  <h1 style="cursor: pointer;" onclick="toggleTitles('#eight')">8) CSS Filters</h1>
   <div id="eight">
-
+        Coming soon..
 
     <div class="paragraph">
       <p></p>
