@@ -42,9 +42,17 @@
 }
 )(jQuery); // End of use strict
 
-
+// for dark-light theme switcher
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
+});
+
+// for page up arrow
+
+$('.back-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
 });

@@ -88,7 +88,10 @@ body.dark h1 {
   color: white;
 }
 body.dark h3 {
-  color: white;
+  color: green;
+}
+body.dark hr{
+  background-color: aqua; color:aqua; height: 1px; border: 0;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -419,6 +422,7 @@ h2,
 h3,
 .h3 {
   font-size: 2rem;
+  color:green;
 }
 
 h4,
@@ -11083,6 +11087,7 @@ section.resume-section .resume-section-content {
   }
 }
 
+ /* for photo which appears only on mobile  */
 .mobile-photo {
   margin-top: 40px;
   margin-bottom: -40px;
@@ -11095,6 +11100,7 @@ section.resume-section .resume-section-content {
   height: auto;
 }
 
+/* for dark-light theme switcher*/
 .checkbox {
 	opacity: 0;
 	position: absolute;
@@ -11138,3 +11144,4 @@ section.resume-section .resume-section-content {
 .fa-sun {
 	color: #f39c12;
 }
+
