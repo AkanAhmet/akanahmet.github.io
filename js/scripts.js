@@ -42,47 +42,9 @@
 }
 )(jQuery); // End of use strict
 
-const toggleSwitch = document.querySelector('#checkbox');
-const currentTheme = localStorage.getItem('theme');
-const body = document.querySelector('body');
-const h1 = document.querySelectorAll('h1');
-const h3 = document.querySelectorAll('h3');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-    toggleSwitch.checked = false;
-}
+const chk = document.getElementById('chk');
 
-function switchTheme(e) {
-
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        body.style.background = '#222';
-        body.style.color = '#e1e1ff';
-        colorSetter(h1,'white');
-        colorSetter(h3,'white');
-      
-        
-    }
-    else {       
-         document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-          body.style.background = '#fff'; 
-          body.style.color = '#212529';
-          colorSetter(h1,'#212529');
-          colorSetter(h3,'#212529');  
-    }    
-}
-
-function colorSetter( arr, color) {
-    for(let header of arr) {
-        header.style.color = color;
-    }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
