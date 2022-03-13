@@ -11145,3 +11145,23 @@ section.resume-section .resume-section-content {
 	color: #f39c12;
 }
 
+.fa-check {
+  color:green;
+}
+
+/*  Mobile nav menu - :not(:hover) animation*/
+
+@keyframes ahmet{
+   from{}
+   to{ background: #4F95DA;  transition: 1.3s ease-in-out; }
+}
+
+
+.no-animation {
+  -webkit-animation: none !important;  
+  animation: none !important;
+}
+
+.navbar-toggler:not(:hover) {
+  animation: ahmet 1.3s infinite;
+}

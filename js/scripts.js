@@ -1,21 +1,19 @@
-
-    (function ($) {
+(function ($) {
     "use strict"; // Start of use strict
-	  
+
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
             location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
+            this.pathname.replace(/^\//, "") &&
             location.hostname == this.hostname
         ) {
             var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
+            target = target.length ?
+                target :
+                $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
-                $("html, body").animate(
-                    {
+                $("html, body").animate({
                         scrollTop: target.offset().top,
                     },
                     1000,
@@ -35,20 +33,38 @@
     $("body").scrollspy({
         target: "#sideNav",
     });
-}
-)(jQuery); // End of use strict
 
-// for dark-light theme switcher
-const chk = document.getElementById('chk');
 
-chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-});
+    // for dark-light theme switcher
+    const chk = document.getElementById('chk');
 
-// for page up arrow
+    chk.addEventListener('change', () => {
+        document.body.classList.toggle('dark');
+    });
 
-$('.back-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
+    // for page up arrow
+
+    $('.back-to-top').click(function () { // When arrow is clicked
+        $('body,html').animate({
+            scrollTop: 0 // Scroll to top of body
+        }, 500);
+    });
+
+    // for tooltips(title)
+    $('a').tooltip();
+
+    // for if user clicks menu, navmenu animation ends.
+     $('.navbar-toggler').mouseleave(function () {
+        $(this).addClass("no-animation");
+               
+    }) 
+
+    $('#easterEgg').hover(function() {
+        var nowDate = new Date(); 
+        var date = nowDate.getDate()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getFullYear();
+        $(this).text(date);
+    }).mouseleave(function() { 
+        $(this).text("Ahmet AKAN");
+    });
+
+})(jQuery); // End of use strict
