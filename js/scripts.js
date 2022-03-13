@@ -67,4 +67,8 @@
         $(this).text("Ahmet AKAN");
     });
 
+    $('.dropdown-toggle').click(function() {
+        $('.cv').toggle();
+    });
+
 })(jQuery); // End of use strict
