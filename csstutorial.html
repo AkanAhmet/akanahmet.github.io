@@ -2,32 +2,28 @@
 <html lang="en" dir="ltr">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
   <link rel="icon" href="/resources/images/html/favicon.png">
   <link rel="stylesheet" href="css/cssTutorial.css">
-
   <title> Ahmet AKAN </title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-danger">
     <div class="container">
-      <a class="navbar-brand" href="#"><em>Ahmet AKAN</i> </a>
+      <a class="navbar-brand" href="#"><i>Ahmet AKAN</i> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">HOME</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="htmltutorial.html"> HTML-PAGE</a>
           </li>
@@ -40,14 +36,10 @@
           <li class="nav-item">
             <a class="nav-link" href="http://akanahmet.github.io">MY RESUME</a>
           </li>
-
-
         </ul>
-
       </div>
     </div>
   </nav>
-
   <h1 onclick="toggleTitles('#one')"> 1) Welcome to CSS</h1>
   <div id="one">
     <div class="paragraph">
@@ -97,7 +89,6 @@
             <b>#textId {font-weight: bold;}</b>
           </li>
         </ul>
-
         <h2>Descendant Selectors</h2>
         <b> #intro .first em {color: pink; background-color:gray;}</b>
         <br> <br> <span class="codeExample"> /* CSS Comments goes here */ </span>
@@ -105,18 +96,13 @@
     </div>
   </div>
   <hr>
-
   <!--    ------------------------------------------------------------------------------------------------------------------------------------ -->
-
   <h1 onclick="toggleTitles('#two')">2) Working with Text</h1>
   <div id="two">
-
     <div class="paragraph">
-
       <div class="title">
         font-family
       </div>
-
       <p>The font-family property specifies the font for an element.
         There are <span class="emphasizeContent">two</span> types of font family names: <br>
         - <span class="emphasizeContent">font family:</span> a specific font family (like Times New Roman or Arial) <br>
@@ -127,7 +113,6 @@
       If the name of a font family is more than one word, it must be in quotation marks: "Times New Roman".
       <span class="codeExample"> font-family: "Times New Roman", Times, serif; </span>
     </div>
-
     <div class="paragraph">
       <p class="serif">
         This is a paragraph shown in serif font.
@@ -145,7 +130,6 @@
         This is a paragraph shown in fantasy font.
       </p>
     </div>
-
     <div class="paragraph">
       <p> The font-family property should hold several font names as a "fallback" system.
         When specifying a web font in a CSS style, add more than one font name, in order to avoid unexpected behaviors.
@@ -158,7 +142,6 @@
       then <span class="emphasizeContent">Helvetica</span>).
       If the browser doesn't have any of them, it will try the generic <span class="emphasizeContent">sans-serif</span>.
     </div>
-
     <div class="paragraph">
       <div class="title">
         font-size
@@ -201,7 +184,6 @@
         Paragraph text set to be very large
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         font-style
@@ -219,7 +201,6 @@
       <p class="italic">This paragraph is italic.</p>
       <p class="oblique">This paragraph is oblique.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         font-weight
@@ -244,7 +225,6 @@
       <p class="bolder">This is a font with a "bolder" weight.</p>
       <p class="thicker">This is a font with a "700" weight.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         font-variant
@@ -260,7 +240,6 @@
       <p class="small">Paragraph font variant set to small-caps.</p>
       <p class="inherit">Paragraph font variant set to inerit.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         color
@@ -284,7 +263,6 @@
       <p class="example2">The text inside the paragraph is rgb(128,0,128).</p>
       <p class="example3">The text inside the paragraph is #7FDBFF.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Aligning Text Horizontally
@@ -303,9 +281,6 @@
       <p class="right">This paragraph is aligned to <strong>right.</strong></p>
       <p class="center">This paragraph is aligned to <strong>center.</strong></p>
     </div>
-
-
-
     <div class="paragraph">
       <div class="title">
         Aligning Text Vertically
@@ -357,7 +332,6 @@
         table-cell;</span> styling rules are
       applied to make the vertical-align property work with divs.
     </div>
-
     <div class="paragraph">
       <div class="title">
         text-decoration
@@ -375,7 +349,6 @@
         or <span class="emphasizeContent">line-through</span> values in a space-separated list to add multiple
         decoration lines.
         <span class="codeExample"> text-decoration: underline;</span>
-
       </p>
     </div>
     <div class="paragraph">
@@ -385,7 +358,6 @@
       <p class="underline">This is underlined text.</p>
       <p class="line-through">This is lined-through text.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Indenting the Text
@@ -404,7 +376,6 @@
         like pt, cm, em, etc.
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         text-shadow
@@ -426,9 +397,6 @@
       <p class="shadow">Text-shadow example</p>
       <p class="blur">Text-shadow with blur effect</p>
     </div>
-
-
-
     <div class="paragraph">
       <div class="title">
         text-transform
@@ -452,7 +420,6 @@
         <b>Lowercase</b> value transforms all characters to lowercase.
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         letter-spacing
@@ -474,7 +441,6 @@
       <p class="positive ">This paragraph is letter-spaced at 4px.</p>
       <p class="negative">This paragraph is letter-spaced at -1.5px</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         word-spacing
@@ -500,9 +466,7 @@
       <p class="pxwordspacing">This paragraph is word-spaced at 30px.</p>
       <p class="positivewordspacing">This paragraph is word-spaced at 20px.</p>
       <p class="negativewordspacing">This paragraph is word-spaced at -5px.</p>
-
     </div>
-
     <div class="paragraph">
       <div class="title">
         white-spacing
@@ -525,14 +489,10 @@
       <p><span style="color:red; font-style:italic"> <b>overflow:hidden</b> used for <b>responsive</b>
           design ^^</span></p>
     </div>
-
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#three')">3) Properties</h1>
-
   <div id="three">
     <div class="paragraph">
       <div class="title">
@@ -559,7 +519,6 @@
         Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom
         margin</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Borders
@@ -573,7 +532,6 @@
         border-right-style, border-bottom-style, and border-left-style for the corresponding sides.</p>
       <span class="codeExample"> border: 5px solid red; border-style: dotted;</span>
     </div>
-
     <div class="paragraph">
       <p class="solidborder">This is an example of a red - solid border.</p>
       <p class="firstsolidborder">Border width of this paragraph is set to 2px.</p>
@@ -588,17 +546,14 @@
       <p class="outset">This is an outset border.</p>
       <p class="hidden">This is a hidden border.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         width - height and background-color
       </div>
       <p> <span class="codeExample">max-width:90%; height:90px; background-color: aqua;</span> </p>
       <div style="max-width:900%; height:90px; background-color: aqua; margin:10px;">
-
       </div>
     </div>
-
     <div class="paragraph">
       <div class="title">
         background-image
@@ -613,7 +568,6 @@
         To specify more than one image, just separate the URLs with <span class="emphasizeContent">commas</span>.</p>
       <span class="codeExample">body{ background-image: url("bg.png"); }</span>
     </div>
-
     <div class="paragraph">
       <b>The background-repeat Property</b>
       <p>The background repeat property specifies how background images are repeated. <br>
@@ -647,7 +601,6 @@
           no-repeat;background-attachment: scroll; }</span>
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Styling the Lists
@@ -664,7 +617,6 @@
         <span class="codeExample"> ul{ list-style-type: square; } </span>
       </p>
     </div>
-
     <div class="paragraph">
       <ol class="lower-alpha">
         <li>Red</li>
@@ -713,7 +665,6 @@
         <span class="codeExample"> ul{ list-style: square outsside none; }</span>
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Styling the Tables
@@ -738,7 +689,6 @@
         </tr>
       </table>
     </div>
-
     <div class="paragraph">
       <b>The caption-side Property</b>
       <p>The <span class="emphasizeContent">caption-side</span> property specifies the position of a table caption.
@@ -775,7 +725,6 @@
         </tr>
       </table>
     </div>
-
     <div class="paragraph">
       <b>The empty-cells property</b>
       <p>The <span class="emphasizeContent">empty-cells</span> property specifies whether or not to display borders and
@@ -796,7 +745,6 @@
           <td></td>
         </tr>
       </table>
-
     </div>
     <div class="paragraph">
       <b>The table-layout Property</b>
@@ -816,7 +764,6 @@
           <td width="90%" style="border: 1px solid gray">20.000</td>
         </tr>
       </table>
-
       <p>Table-layout is set to <b>fixed</b> </p>
       <table class="fixed" style="border-collapse: separate; width: 50%;border: 1px solid gray;">
         <tr>
@@ -825,7 +772,6 @@
         </tr>
       </table>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Styling the Links
@@ -864,7 +810,6 @@
           This link has no underline.
         </a></p>
     </div>
-
     <div class="paragraph">
       <div class="title">
         Customizing the Mouse Cursor
@@ -889,9 +834,7 @@
     </div>
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#four')"> 4) Positioning and Layout</h1>
   <div id="four">
     <div class="paragraph">
@@ -905,14 +848,11 @@
           width as necessary</b>, and does not force line breaks. <br>
         <span class="emphasizeContent">display:none</span> hides an element, so it does not take up any space. The
         element will be hidden, and the page will be displayed as if the element is not there.
-
       </p>
-
       <span class="codeExample">span {
         display: block;
         }</span>
     </div>
-
     <div class="paragraph">
       <span>First span.</span>
       <span>Second span.</span>
@@ -923,14 +863,12 @@
       <p class="inline">Third paragraph.</p>
       <p class="inline">Fourth paragraph.</p>
     </div>
-
     <div class="paragraph">
       <div class="title">The visibility Property</div>
       <p>
         The <span class="emphasizeContent">visibility</span> property specifies whether an element is <b>visible</b> or
         <b>hidden</b> . The most common values are visible
         and hidden. <br>
-
         Hiding an element can be done by setting the <b> display</b> property to <b>"none"</b> or the <b>visibility</b>
         property to <b>"hidden".</b> <br>
         However, notice that these two methods produce different results:
@@ -938,12 +876,10 @@
           class="emphasizeContent">still take up the same space as before</span> . <br> The element will be
         hidden, but it will still affect the layout.
       </p>
-
       <span class="codeExample">p {
         visibility: visible;
         }</span>
     </div>
-
     <div class="paragraph">
       <div class="title">Positioning Elements</div>
       <p>
@@ -955,27 +891,21 @@
           work </b> unless the position property is set first. <br> They also work differently depending on the
         positioning method.
       </p>
-
       <span class="codeExample"> position:fixed; top: 30px; right: 5px;</span> <br>
-
       <h2>Static Positioning</h2>
       HTML elements are positioned <span class="emphasizeContent">static</span> by <b>default</b>. A static positioned
       element is always positioned according to the <b>normal flow</b> of the page.
       <br> Static positioned elements are <b>not affected</b> by the top, bottom, left, and right properties.
-
       <h2>Fixed Positioning</h2>
       An element with a <span class="emphasizeContent">fixed</span> position is positioned relative to the browser
       window, and will <b>not move</b> even if the
       window is scrolled. <br>
       The position can be specified using one or more of the properties top, right, bottom, and left.
-
       <h2>Relative Positioning</h2>
       A <span class="emphasizeContent">relative</span> positioned element is positioned relative to its normal position.
       <br>
       The properties top, right, bottom, and left can be used to specify how the rendered box will be shifted.
-
     </div>
-
     <div class="paragraph">
       <div class="title">Floating Elements</div>
       <p>
@@ -990,7 +920,7 @@
       <span class="codeExample">img { float: right; }</span>
     </div>
     <div class="paragraph">
-      <p><img id="floatRight" src="https://www.sololearn.com/uploads/css_logo.png" />
+      <p><img id="floatRight" src="resources/images/css/css_logo.png" width="100" height="100" alt="Css Logo" />
         This paragraph has an image that is floated to the <strong>right.</strong> <br>
         It is highly recommended to add a margin to images so that the text does
         not get too close to the image. <br> If you want your text to be easily read, you
@@ -998,7 +928,6 @@
         and other content.
       </p>
     </div>
-
     <div class="paragraph">
       <div class="title">The Overflow Property</div>
       <p>
@@ -1007,7 +936,6 @@
         accommodate the content. <br>
         The <span class="emphasizeContent">overflow</span> property is used to Specify the behavior that occurs when the
         content overflows the element's box.
-
         <span class="codeExample"> div { overflow: scroll; }</span>
       </p>
     </div>
@@ -1019,7 +947,6 @@
         the content cannot fit.
       </div>
     </div>
-
     <div class="paragraph">
       <p>
         <b> auto and hidden</b> <br>
@@ -1029,7 +956,6 @@
         invisible.
       </p>
     </div>
-
     <div class="paragraph" style="display: flex; justify-content: center;">
       <div class="overflowHidden">
         This text is inside the div element, which has a blue
@@ -1038,23 +964,17 @@
         the content cannot fit.
       </div>
     </div>
-
-
-
     <div class="paragraph">
       <div class="title">The z-index Property</div>
       <p>
-
         When elements are positioned outside the normal flow, they can overlap other elements. <br>
         The <span class="emphasizeContent">z-index</span> property specifies the stack order of an element (which
         element should be placed in front of, or
         behind, the others). <br> The z-index <span class="emphasizeContent">works only on positioned elements</span>
         </span> (position:absolute, position:relative, or position:fixed).
-
         <span class="codeExample"> div { position: absolute; background-color: blue; z-index: 3; }</span>
       </p>
     </div>
-
     <div class="paragraph">
       The red box overlaps the blue box, because it was placed later in the HTML markup.
       The <span class="emphasizeContent">z-index</span> property can change this order.
@@ -1063,14 +983,10 @@
       <br>
       <div class="blue2">Blue</div>
       <div class="red2">Red</div>
-
     </div>
-
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#five')"> 5) CSS3 Basics</h1>
   <div id="five">
     <div class="paragraph">
@@ -1079,7 +995,6 @@
   </div>
   <hr>
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#six')"> 6) Gradients & Backgrounds</h1>
   <div id="six">
     <div class="paragraph">
@@ -1087,9 +1002,7 @@
     </div>
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#seven')"> 7) Transitions & Transforms</h1>
   <div id="seven">
     <div class="paragraph">
@@ -1097,9 +1010,7 @@
     </div>
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
   <h1 onclick="toggleTitles('#eight')"> 8) CSS Filters</h1>
   <div id="eight">
     <div class="paragraph">
@@ -1107,30 +1018,27 @@
     </div>
   </div>
   <hr>
-
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
-
-    <script>
+  <script>
     $(document).ready(function () {
       var list = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
       for (var i = 1; i < list.length; i++) {
         toggleTitles(list[i]);
       }
-      alert("Click Titles to toggle Content");
+      /* alert("Click Titles to toggle Content"); */
     });
 
     function toggleTitles(id) {
       $(id).toggle();
     }
   </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
